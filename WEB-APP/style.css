@@ -1,0 +1,33 @@
+
+/*Class CSS*/
+.navbar-brand{
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(157, 96, 12);
+}
+
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("GD.jpg");
+  
+     min-height: 150px;
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
