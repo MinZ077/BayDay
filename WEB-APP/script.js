@@ -1,8 +1,5 @@
-
 //patoUQN7b65QykWH4.cf1c2c4313073ffaa5c4c59e59bc6d5e016928ebc8b04dd8ada66cc196cea138
-//https://api.airtable.com/v0/appisfPQ5E3ZUjEK6/places 
-
-
+//https://api.airtable.com/v0/appisfPQ5E3ZUjEK6/places
 
 "use strict";
 
@@ -17,10 +14,7 @@ async function getAllRecords() {
     },
   };
 
-  await fetch(
-    `https://api.airtable.com/v0/appisfPQ5E3ZUjEK6/places`,
-    options
-  )
+  await fetch(`https://api.airtable.com/v0/appisfPQ5E3ZUjEK6/places`, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // response is an object w/ .records array
@@ -38,20 +32,26 @@ async function getAllRecords() {
         let hour = data.records[i].fields["hour"];
         let fee = data.records[i].fields["fee"];
         let link = data.records[i].fields["link"];
-        let image = data.records[i].fields["image"];
-
+        let logo = data.records[i].fields["image"];
 
         newHtml += `
-        
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${destination}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    
+      
+
+
+
+          <div class="card" style="width: 18rem;">
+            <div>${logo
+            ? `<img class="card-img-top rounded" alt="${name}" src="${logo[0].url}">`
+            : ``}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">${destination}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+
         
         `;
       }
@@ -59,6 +59,5 @@ async function getAllRecords() {
       getResultElement.innerHTML = newHtml;
     });
 }
-
 
 getAllRecords();
