@@ -47,7 +47,7 @@ async function getAllRecords() {
             <div class="card-body">
               <h5 class="card-title">${destination}</h5>
               <p class="card-text">${description}</p>
-              <a class="mt-1 btn btn-primary mt-2" href="page.html?id=${data.records[i].id}" >View Detail</a>
+              <a class="mt-1 btn btn-secondary mt-2" href="page.html?id=${data.records[i].id}" >View Detail</a>
             </div>
           </div>
 
