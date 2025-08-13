@@ -6,21 +6,14 @@
     font-style: normal;
     color: rgb(157, 96, 12);
 }
-/*
-.carouselChange{
-   width: 500px;
-   margin-top: 200px;
-   margin:auto;
-}
 
-*/
+
 .carouselChange {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-   margin-top: 0 !important;
+    margin-bottom: 50px;
 }
-.carousel { margin-top: 0 !important; }
 
 
 .carousel-item img {
@@ -28,8 +21,6 @@
   object-fit: cover;  
   width: 100%;
 }
-
-
 
 
 .bg-img {
@@ -46,7 +37,7 @@
 
   /* Needed to position the navbar */
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 /* Position the navbar container inside the image */
@@ -54,4 +45,37 @@
   position: absolute;
   margin: 20px;
   width: auto;
+}
+
+/* Make the parent row a flex container that wraps */
+#place {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* space between cards */
+}
+
+/* Make all cards the same height */
+#place .card {
+  flex: 1 1 18rem; /* min width 18rem, flex to fill row */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure card body stretches to match height */
+#place .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push the button to the bottom */
+#place .btn {
+  margin-top: auto;
+}
+
+
+#place .card-img-top {
+  height: 200px;         /* pick the height you want */
+  object-fit: cover;     /* crop without distortion */
+  width: 100%;
 }
