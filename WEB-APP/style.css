@@ -6,12 +6,29 @@
     font-style: normal;
     color: rgb(157, 96, 12);
 }
-
+/*
 .carouselChange{
    width: 500px;
    margin-top: 200px;
    margin:auto;
 }
+
+*/
+.carouselChange {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+   margin-top: 0 !important;
+}
+.carousel { margin-top: 0 !important; }
+
+
+.carousel-item img {
+  height: 50vh; 
+  object-fit: cover;  
+  width: 100%;
+}
+
 
 
 
@@ -29,7 +46,7 @@
 
   /* Needed to position the navbar */
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 10px;
 }
 
 /* Position the navbar container inside the image */
