@@ -47,7 +47,7 @@ async function getAllRecords() {
             <div class="card-body">
               <h5 class="card-title">${destination}</h5>
               <p class="card-text">${description}</p>
-              <a class="mt-1 btn btn-primary mt-2" href="page.html?id=${data.records[i].id}" >Go somewhere</a>
+              <a class="mt-1 btn btn-primary mt-2" href="page.html?id=${data.records[i].id}" >View Detail</a>
             </div>
           </div>
 
@@ -105,7 +105,11 @@ async function getOneRecord(id) {
         <h5 class="card-title bar">${destination}</h5>
         <p class="card-text">${description}</p>
         
-        <p class="card-text"><small>${address}
+        <p class="card-text"><small>${address}</p>
+
+        <p class="card-text"><small>${hour}</p>
+        <p class="card-text"><small>${fee}</p>
+        <p class="card-text">Link to Website: <small><a>${link}</a></p>
       </div>
     </div>
   </div>
