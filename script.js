@@ -17,15 +17,15 @@ async function getAllRecords() {
   await fetch(`https://api.airtable.com/v0/appisfPQ5E3ZUjEK6/places`, options)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data); // response is an object w/ .records array
+      console.log(data); 
 
-      getResultElement.innerHTML = ""; // clear brews
+      getResultElement.innerHTML = ""; 
 
       let newHtml = "";
 
       for (let i = 0; i < data.records.length; i++) {
-        let destination = data.records[i].fields["destination"]; // here we are getting column values
-        let location = data.records[i].fields["location"]; //here we are using the Field ID to fecth the name property
+        let destination = data.records[i].fields["destination"]; 
+        let location = data.records[i].fields["location"]; 
         let address = data.records[i].fields["address"];
         let category = data.records[i].fields["category"];
         let description = data.records[i].fields["description"];
@@ -79,8 +79,8 @@ async function getOneRecord(id) {
     .then((data) => {
       console.log(data); // response is a single object
 
-        let destination = data.fields["destination"]; // here we are getting column values
-        let location = data.fields["location"]; //here we are using the Field ID to fecth the name property
+        let destination = data.fields["destination"]; 
+        let location = data.fields["location"]; 
         let address = data.fields["address"];
         let category = data.fields["category"];
         let description = data.fields["description"];

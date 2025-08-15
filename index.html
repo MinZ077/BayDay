@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bay Day</title>
-    <!--linking to bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
-    <!--connect to css-->
-    <link rel="stylesheet" href="./style.css" />
-    
-    <!--Font Import-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bay Day — Explore the Bay Area</title>
 
-  <body>
-  <!--navbar-->
-    <div class="bg-img">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-0">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Bay Day</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-          </div>
-        </nav>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="description" content="Bay Day — discover great places across the Bay Area." />
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="font-family:'Rock 3D', system-ui;">
+        Bay Day
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+              aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+
+  <!-- Carousel -->
+  <section class="position-relative">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+
+      <div class="carousel-inner hero-carousel">
+        <div class="carousel-item active">
+          <img src="./img1.jpg" class="d-block w-100 object-cover" alt="Golden Gate Bridge at sunrise" loading="eager">
+        </div>
+        <div class="carousel-item">
+          <img src="./img2.jpg" class="d-block w-100 object-cover" alt="San Francisco skyline" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="./img3.jpg" class="d-block w-100 object-cover" alt="Muir Woods redwoods" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="./img4.jpg" class="d-block w-100 object-cover" alt="Muir Woods redwoods" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="./img5.jpg" class="d-block w-100 object-cover" alt="Muir Woods redwoods" loading="lazy">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- overlay -->
+      <div class="hero-overlay"></div>
+      <div class="hero-text container text-white py-5">
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-bold mb-2">Explore the Bay Area</h1>
+          <p class="lead mb-0">Find the best spots for your next Bay Day.</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!--Carousel Start-->
-  <div class = "carouselChange"> 
-    <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators" >
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  <!-- Cards grid -->
+  <main class="container">
+    <h2 class="h4 fw-bold mb-3">Explore Places</h2>
+    <div class="row g-2" id="place" ></div>
+  </main>
 
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./img1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
+  <!-- Footer -->
+  <footer class="bg-white border-top">
+    <div class="container flex-wrap justify-content-between gap-2">
+      <p class="mb-0 text-muted">© <span id="year"></span> Bay Day</p>
     </div>
-    <div class="carousel-item">
-      <img src="./img2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./img3.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./img4.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./img5.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-    <!--Carousel End-->
+  </footer>
 
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+          crossorigin="anonymous"></script>
 
+  <!-- script -->
+  <script src="./script.js" defer></script>
 
-
-        <!--container with id 'brews' where JavaScript pushes the Airtable data -->
-    <div class="container-fluid tables">
-      <div class="row g-3" id="place"></div>
-    </div>
+  <!-- helpers -->
+  <script>
+    // Current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
     
-    <!--more feature with bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-    <!--connect to javascript-->
-    <script src="./script.js"></script>
-  </body>
+  </script>
+</body>
 </html>
-
